@@ -1,0 +1,26 @@
+function LongestWord(sen) {
+
+  const words = sen.match(/[a-zA-Z]+/g);
+
+  if (!words) {
+    /
+    return '';
+  }
+
+  let wordLength = 0;
+  let longestWord = '';
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > wordLength) {
+      wordLength = words[i].length;
+      longestWord = words[i];
+    }
+  }
+
+  return longestWord;
+}
+
+
+   
+// keep this function call here 
+console.log(LongestWord(readline()));
